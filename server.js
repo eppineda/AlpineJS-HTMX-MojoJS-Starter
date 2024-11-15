@@ -1,5 +1,7 @@
+import chalk from 'chalk'
 import { readdir } from 'fs/promises'
 import console from './my-console.js'
+import route from './routing/index.js'
 
 const startup = mojo => new Promise((resolve, reject) => {
 	const port = process.env.PORT
@@ -49,6 +51,7 @@ const mapRoutes = async app => {
 	app.get('/', async ctx => {
 		await ctx.sendFile(ctx.home.child('public', 'index.html')) // default response for root aka public/
 	})
+	route(app)
 
 // all static web files under public/
 	new Promise((resolve, reject) => {
