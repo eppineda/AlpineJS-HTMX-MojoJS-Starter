@@ -8,5 +8,12 @@
   },
   "keywords": ["alpinejs", "htmx", "mojojs"],
   "author": "",
-  "license": "Unilicense"
+  "license": "Unilicense",
+  "type": "module",
+  "dependencies": {
+    "@mojojs/core": "^1.26.6",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.7"
+  }
 }
